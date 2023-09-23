@@ -178,7 +178,7 @@ div() """
 
 # 입력값 홀/짝수
 
-"""def is_even(n) :
+""" def is_even(n) :
     if  n % 2 == 0:
         print("짝수")
     else :
@@ -186,21 +186,21 @@ div() """
         
 num = input("숫자를 입력하세요 : ")
 
-is_even(int(num))"""
+is_even(int(num)) """
 
 
 # 문자열 반전
 
-"""def reverse_string(msg) :
+""" def reverse_string(msg) :
     return msg[::-1]
 
 in_str = input("문자열 : ")
-print(reverse_string(in_str))"""
+print(reverse_string(in_str))
 
 
 # 두수를 입력받아 사칙연산
 
-"""def add(a, b) :
+def add(a, b) :
     return int(a) + int(b)
 def sub(a, b) :
     return int(a) - int(b)
@@ -215,10 +215,10 @@ b = input("b를 입력하세요")
 print("더하기 : ", add(a, b))
 print("삐기 : ", sub(a, b))
 print("곱하기 : ", mul(a, b))
-print("나누기 : ", div(a, b))"""
+print("나누기 : ", div(a, b))
 
 
-"""def calc(a, b) :
+def calc(a, b) :
     print(int(a) + int(b))
     print(int(a) - int(b))
     print(int(a) * int(b))
@@ -227,9 +227,10 @@ print("나누기 : ", div(a, b))"""
 a = input("a를 입력하세요")
 b = input("b를 입력하세요")
 
-calc(a, b)"""
+calc(a, b) """
 
-# 5개 수 입력
+
+ # 5개 수 입력 
 def sum_num(num) :
     return sum(num)
 
@@ -238,4 +239,4 @@ nums = []
 for i in range(1, 6) :
     innum = int(input(f"{i} 번쨰 숫자 입력 : "))
     
-print(sum_num(nums))
+print(sum_num(nums)) 
