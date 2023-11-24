@@ -149,8 +149,9 @@ print(pi_res)
 math """
 
 
+""" # 모듈화
 
-""" import mod.utils as mu
+import mod.utils as mu
 
 res = mu.mt_sqrt(7)
 print(res)
@@ -172,7 +173,7 @@ print(pi) """
 
 
 
-""" import random
+"""import random
 
 # 1부터 10까지의정수 중에서 랜덤으로 선택
 print(random.randint(1, 10))
@@ -189,8 +190,12 @@ print(random.nprmalvariate(0, 1)) """
 
 
 
+
+#  random : 난수 생성과 관련된 함수를 제공 
+
 # 모듈화
-"""import random as rd
+
+""" import random as rd
 
 res = rd.randint(1, 100)
 print(res)
@@ -203,83 +208,4 @@ fres = rd.Random()
 print(fres)
 
 nvres = rd.normalvariate()
-print(nvres)"""
-
-
-""" # datetime 이용 함수
-from datetime import datetime as dt
-
-# 현재 시간 출력
-# 특정 시간대의 현재 시간 출력
-# from pytz import timezone
-# import timezone
-# tz = timezone('Asia/Seoul') """
-
-""" 
-# 문자열을 날짜로 변환
-date_string = '2021-07-08'
-date_object = dt.strptime(date_string, '%Y-%m-%d')
-print(date_object)
-
-# 날짜를 문자열로 변환
-date_object = dt.now()
-date_string = date_object.strftime('%Y-%m-%d')
-print(date_string) """
-
-
-
-""" import mod.utils as mu
-# import datetime as dt
-
-#print(dt.now()
-dtnow = mu.get_dtnow()
-print(dtnow)
-
-ret = mu.cvt_time2str("2023-09-25")
-print(ret)
-
-res = mu.cvt_str2time()
-print(res)
- """
-
-""" # os 모듈 확인
-import os
-
-# 현재 작업 디렉토리 출력
-print(os.getcwd())
-
-# 디렉토리 변경
-os.chdir('../')
-
-# 변경된 디렉토리 출력
-print(os.getcwd())
-
-# 파일 목록 출력
-print(os.listdir())
-
-# 디렉토리 삭제
-os.rmdir('new_directory')
-print(os.listdir())
-
-# 디렉토리 생성
-os.mkdir('new_directory')
-print(os.listdir()) """
-
-
-
-""" import mod.utils as mu
-import os
-
-print(mu.get_curdir())
-
-pnname = "python"
-mu.os_mkdir(pnname)
-print(os.listdir())
-
-os.rmdir(pnname)
-print(os.listdir()) """
-
-
-import sys
-print(sys.version)
-print(sys.argv)
+print(nvres) """
