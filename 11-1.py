@@ -142,7 +142,122 @@ print(df.first("7D"))
 print(df.last("7D")) """
 
 
-
-
 # pip install Finance-DataReader
-import FinanceDateReader as fdr
+
+
+# 코스피지수
+
+""" # import FinanceDateReader as fdr
+# ksp = fdr.DataReader("KS11", "2001")
+#print(ksp)
+# print("\n------------------\n") """
+
+
+
+# 최고가
+
+# res = ksp["High"].max()
+# print(res)
+
+# res = ksp["Low"].min()
+# print(res)
+
+
+
+# 최고가 값 찾기
+
+# res = ksp["volume"].nlargest(n=5)
+# print(res)
+
+
+
+# 최저가 값 찾기
+
+# res = ksp["volume"].nsmallest(n=5)
+# res = ksp["close"].nsmallest(n=5)
+# res = ksp["close"].nslargest(n=5)
+# print(res)
+
+
+
+# 3000 최초일
+
+# cond = ksp["Close"] >= 3000
+# cond = ksp["Close"] >= 3000
+# res = ksp[cond].index[0]
+# print(res)
+
+
+# res = ksp["Volume"] > ksp["Volume"].shift()
+# print(res)
+
+
+
+# 위 값 참조 처리
+
+# ksp["Volume"] > ksp["Volume"].shift()
+# print(ksp)
+
+# res = ksp["grp"] = ksp["up"] != ksp["up"].shift().cumsum()
+# print(res)
+
+# res = ksp["grp"] = ksp["up"] != ksp["up"].shift().cumsum()
+# print(ksp)
+
+
+
+# 연속 증가값 확인
+
+# ksp["grp"].groupby(ksp["grp"].values).cumcount() + 1
+# print(ksp)
+
+# print(ksp["up_cnt"].max())
+
+
+
+# 변환
+
+""" import pandas as pd
+import pandas as target
+
+taget = "./data/apt.csv"
+df = pd.read_csv(target, encoding="CP949")
+
+df.to_csv("./data/apttt.csv", encoding="utf8")
+
+print(df.head()) """
+
+
+
+# 부동산 정보 처리
+
+""" import pandas as pd
+
+df = pd.read_csv("./data/conv_apt.cvs", index_col=0)
+taget = "./data/apt.csv"
+print(df.head()) """
+
+
+# 컬럼명 바꾸기
+
+""" df.rename(columns={"분양가격(제곱미터)":"분양가"})
+print(df)
+print(df.dtypes)
+
+df["분양가"] = df["분양가"].convert_dtypes()
+print(df.dtypes) """
+
+
+# arry 변환
+
+arr = df.to_numpy()
+# print(arr)
+# print(arr[2])
+# print(len(arr))
+
+print(df.describe())
+
+
+print(df.transpose())
+print("\n------------------\n")
+print(df.T.head())
